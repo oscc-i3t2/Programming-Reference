@@ -1,14 +1,15 @@
 # Python Program - One Dimensional Array
+dec='y';
+print("1D array");
 
-print("Enter 'x' for exit.");
-nval = input("How many element you want to store in the array ? ");
-if nval == 'x':
-    exit();
-else:
-    n = int(nval);
+while dec==('y'or'Y') :
+    nval = int(input("How many element you want to store in the array ? "));
     arr = [];
-    for i in range(1, n+1):
-        arr.append(i);
+    for i in range(0, nval):
+        arr.append(input(f"Enter element at {i}th position "));
     print("\nElements in Array are:");
-    for i in range(0, n):
+    print("[ ",end='');
+    for i in range(0, nval):
         print(arr[i], end=" ");
+    print("]");
+    dec=input("Enter y to repeat; x to exit ");
